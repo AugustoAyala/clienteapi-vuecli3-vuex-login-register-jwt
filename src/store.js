@@ -7,7 +7,7 @@ axios.defaults.baseURL = 'http://localhost:8000/api'
 
 export default new Vuex.Store({
   state: {
-    token: localStorage.getItem('localtoken') || null,
+    token: localStorage.getItem('localToken') || null,
     usuario:'',
   },
   getters: {
@@ -35,7 +35,7 @@ export default new Vuex.Store({
         })
           .then(response => {
             const token = response.data.token
-            localStorage.setItem('localtoken', token)
+            localStorage.setItem('localToken', token)
             context.commit('loginToken', token)
             context.dispatch('profile')
             resolve(response)
@@ -71,14 +71,14 @@ export default new Vuex.Store({
         return new Promise((resolve, reject) => {
           axios.post('/logout')
             .then(response => {
-              localStorage.removeItem('localtoken')
+              localStorage.removeItem('localToken')
               context.commit('logoutToken')
               resolve(response)
               console.log(response);
               
             })
             .catch(error => {
-              localStorage.removeItem('localtoken')
+              localStorage.removeItem('localToken')
               context.commit('logoutToken')
               reject(error)
             })
