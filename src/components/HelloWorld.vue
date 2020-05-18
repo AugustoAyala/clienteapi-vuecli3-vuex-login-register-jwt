@@ -5,7 +5,6 @@
       Consumiendo API Login JWT desde cliente Vue.js
       <a href="https://github.com/AugustoAyala" target="_blank" rel="noopener">Acerca de Augusto Ayala</a>.
     </p>
-    
   </div>
 </template>
 
