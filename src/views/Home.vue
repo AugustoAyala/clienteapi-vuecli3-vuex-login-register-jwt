@@ -1,9 +1,7 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png">
-    
     <HelloWorld msg="Login Api JWT"/>
-    
   </div>
 </template>
 
