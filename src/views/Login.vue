@@ -42,7 +42,6 @@ export default {
       this.$store.dispatch('loginToken', {
         email: this.email,
         password: this.password,
-        
       })
       .then(response => {
           this.$router.push({ name: 'home' })
